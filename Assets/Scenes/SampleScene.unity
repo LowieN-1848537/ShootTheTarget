@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 311425301}
   m_Layer: 0
   m_Name: Pillar Pistol
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94de98e798185b499cd9efa87b215a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_body: {fileID: 0}
+  duck: {fileID: 0}
 --- !u!1 &2026704769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,13 +1082,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3242849782502369, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242849935405486, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242850090907048, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3242850559464993, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3242850559464993, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.592
+      value: 3.011
       objectReference: {fileID: 0}
     - target: {fileID: 3242850559464993, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1096,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3242850559464993, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.392
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 3242850559464993, guid: d6d219b3864dc50428843cab880ffe03, type: 3}
       propertyPath: m_LocalRotation.w
