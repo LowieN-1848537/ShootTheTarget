@@ -6,13 +6,25 @@ public class duck_movement : MonoBehaviour
 {
     [SerializeField]
     public GameObject duck;
+    [SerializeField]
     private Rigidbody m_body;
+    [SerializeField]
+    private ParticleSystem m_particles;
+    [SerializeField]
+    private GameObject m_prefab;
+
     float m_speed;
     bool rotate = false;
+
+
     private void OnCollisionEnter(Collision collision){
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "wall"){
         rotate = true;
+        }else if( collision.gameObject.tag == "Bullet"){
+           
+            Instantiate(m_particles,  m_body.transform.position , m_body.transform.rotation);
+            Object.Destroy(gameObject);
         }
         
 
@@ -27,7 +39,7 @@ public class duck_movement : MonoBehaviour
     {
         duck = GameObject.Find("duck");
         m_body = GetComponent<Rigidbody>();
-        m_speed = 0.3f;
+        m_speed = 0.05f;
     }
 
     // Update is called once per frame
