@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 285535499881666933}
   - component: {fileID: 8659610963036894089}
   m_Layer: 0
-  m_Name: chickenDeath
+  m_Name: DuckDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
