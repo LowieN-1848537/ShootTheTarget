@@ -42,6 +42,7 @@ public class duck_movement : MonoBehaviour
         duck = GameObject.Find("duck");
         m_body = GetComponent<Rigidbody>();
         m_speed = 0.7f;
+        
     }
 
     // Update is called once per frame
@@ -49,9 +50,9 @@ public class duck_movement : MonoBehaviour
     {
         m_body.velocity = - transform.right * m_speed;
         if (rotate){
-            int angle = Random.Range(110,250);
+            //int angle = Random.Range(110,250);
             m_speed = Random.Range(0.5f,2f);
-            duck.transform.Rotate(0,angle,0);
+            duck.transform.Rotate(0,180,0);
             rotate = false;
             
         }

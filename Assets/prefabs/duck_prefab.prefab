@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3242848552751384}
   - component: {fileID: 3242848552751389}
   - component: {fileID: 3242848552751390}
-  - component: {fileID: 2181516966618914356}
   m_Layer: 0
   m_Name: Neck
   m_TagString: Untagged
@@ -82,22 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2181516966618914356
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242848552751385}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 2
 --- !u!1 &3242848596943569
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,8 +448,6 @@ GameObject:
   - component: {fileID: 3242849782502370}
   - component: {fileID: 3242849782502375}
   - component: {fileID: 3242849782502368}
-  - component: {fileID: 3242849782502369}
-  - component: {fileID: 113830623162969235}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -537,35 +518,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3242849782502369
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242849782502371}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.9, z: 1}
-  m_Center: {x: 0, y: 0.45, z: 0}
---- !u!54 &113830623162969235
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242849782502371}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 2
 --- !u!1 &3242849839885932
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +642,6 @@ GameObject:
   - component: {fileID: 3242849912644293}
   - component: {fileID: 3242849912644282}
   - component: {fileID: 3242849912644283}
-  - component: {fileID: 3384172639502812773}
   m_Layer: 0
   m_Name: Head_1
   m_TagString: Untagged
@@ -761,22 +712,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &3384172639502812773
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242849912644294}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 2
 --- !u!1 &3242849935405480
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,8 +723,6 @@ GameObject:
   - component: {fileID: 3242849935405487}
   - component: {fileID: 3242849935405484}
   - component: {fileID: 3242849935405485}
-  - component: {fileID: 3242849935405486}
-  - component: {fileID: 9064759642265688977}
   m_Layer: 0
   m_Name: Body_2
   m_TagString: Untagged
@@ -860,35 +793,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3242849935405486
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242849935405480}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &9064759642265688977
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242849935405480}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 2
 --- !u!1 &3242849960946879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +966,6 @@ GameObject:
   - component: {fileID: 3242850090907049}
   - component: {fileID: 3242850090907054}
   - component: {fileID: 3242850090907055}
-  - component: {fileID: 3242850090907048}
   m_Layer: 0
   m_Name: Head_2
   m_TagString: Untagged
@@ -1133,19 +1036,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3242850090907048
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242850090907050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3242850559464994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,6 +1047,7 @@ GameObject:
   - component: {fileID: 3242850559464993}
   - component: {fileID: 9048432359608720982}
   - component: {fileID: 5645203716685553564}
+  - component: {fileID: 4280040385774663793}
   m_Layer: 0
   m_Name: duck_prefab
   m_TagString: Untagged
@@ -1172,7 +1063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3242850559464994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.601, y: 0.25, z: 5.392}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3242849782502370}
@@ -1222,6 +1113,19 @@ MonoBehaviour:
   m_particles: {fileID: 285535499881666933, guid: 10d32b4c2ebdfdf40ab6c673606d639c,
     type: 3}
   m_prefab: {fileID: 0}
+--- !u!65 &4280040385774663793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242850559464994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42921138, y: 0.49747834, z: 0.2149477}
+  m_Center: {x: 0.053395092, y: 0.1398805, z: 0.0003848076}
 --- !u!1 &3242850600783059
 GameObject:
   m_ObjectHideFlags: 0
