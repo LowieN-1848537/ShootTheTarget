@@ -13,7 +13,10 @@ public class shoot_gun : MonoBehaviour
     [SerializeField]
     OVRGrabber leftHand;
 
-    
+    [SerializeField]
+    private AudioSource audioSource;
+
+
     [SerializeField]
     OVRGrabber rightHand;
     // Start is called before the first frame update
@@ -39,6 +42,7 @@ public class shoot_gun : MonoBehaviour
             if (!wasPressed && triggerPressed){
                 //shoot
                 Instantiate(bullet, barrel.transform.position , barrel.transform.rotation );
+                audioSource.Play();
                 cooldown =0.0f;   
             }
 
