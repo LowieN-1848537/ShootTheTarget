@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class duck_movement : MonoBehaviour
 {
     [SerializeField]
@@ -11,8 +10,6 @@ public class duck_movement : MonoBehaviour
     private Rigidbody m_body;
     [SerializeField]
     private ParticleSystem m_particles;
-    [SerializeField]
-    private GameObject m_prefab;
 
     float m_speed;
     bool rotate = false;
@@ -26,20 +23,17 @@ public class duck_movement : MonoBehaviour
            
             Instantiate(m_particles,  m_body.transform.position , m_body.transform.rotation);
             Object.Destroy(gameObject);
+            
         }
         
 
     }
 
 
-
-
-
-
     void Start()
     {
         
-        duck = GameObject.Find("duck");
+        duck = gameObject;
         m_body = GetComponent<Rigidbody>();
         m_speed = 0.7f;
         
