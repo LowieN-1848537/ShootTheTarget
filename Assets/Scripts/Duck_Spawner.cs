@@ -10,6 +10,8 @@ public class Duck_Spawner : MonoBehaviour
     private GameObject duck;
     [SerializeField]
     private TextMeshPro scoretxtfield;
+    [SerializeField]
+    private AudioSource audioSource;
 
 
     private GameObject[] getCount;
@@ -37,6 +39,9 @@ public class Duck_Spawner : MonoBehaviour
         }else if (getCount.Length == 0 && isKillable){
             isKillable =false;
             //update score here
+            audioSource.time = 24f;
+            audioSource.Play();
+
             ++killCount;
             scoretxtfield.SetText(killCount.ToString());
         }

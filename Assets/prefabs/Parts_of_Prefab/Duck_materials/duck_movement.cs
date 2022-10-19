@@ -10,7 +10,6 @@ public class duck_movement : MonoBehaviour
     private Rigidbody m_body;
     [SerializeField]
     private ParticleSystem m_particles;
-
     float m_speed;
     bool rotate = false;
 
@@ -20,7 +19,7 @@ public class duck_movement : MonoBehaviour
         if (collision.gameObject.tag == "wall"){
         rotate = true;
         }else if( collision.gameObject.tag == "Bullet"){
-           
+        
             Instantiate(m_particles,  m_body.transform.position , m_body.transform.rotation);
             Object.Destroy(gameObject);
             

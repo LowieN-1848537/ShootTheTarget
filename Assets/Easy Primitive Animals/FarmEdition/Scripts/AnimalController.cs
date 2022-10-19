@@ -20,6 +20,10 @@ namespace EasyPrimitiveAnimals
 
         private float rotSpeed;
 
+        [SerializeField]
+        private AudioSource audioSource;
+
+
         // Wander variables.
         public float moveAngle = 90f; // Define angle the animal turns after a collision.
         public float movSpeed = 1f; // Define speed that animal moves. This is also used to calculate leg movement speed.
@@ -75,12 +79,13 @@ namespace EasyPrimitiveAnimals
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (!collision.gameObject.CompareTag("Ground") && canRotate) // If the animal collides with something that is not the ground, spin it around.
+            if (canRotate) // If the animal collides with something that is not the ground, spin it around.
             {
                 StartCoroutine(SpinMeRound());
             } 
             if (collision.gameObject.CompareTag("Bullet")){
                 Turnable = false;
+                audioSource.Play();
             }
         }
 
