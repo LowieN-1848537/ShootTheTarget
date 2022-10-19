@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 public class shoot_gun : MonoBehaviour
 {
+    public static event Action GunFired;
+
     public GameObject bullet;
     private bool triggerPressed;
     private bool wasPressed;
@@ -15,6 +18,8 @@ public class shoot_gun : MonoBehaviour
 
     [SerializeField]
     private AudioSource audioSource;
+
+    
 
 
     [SerializeField]
@@ -43,7 +48,8 @@ public class shoot_gun : MonoBehaviour
                 //shoot
                 Instantiate(bullet, barrel.transform.position , barrel.transform.rotation );
                 audioSource.Play();
-                cooldown =0.0f;   
+                cooldown =0.0f;
+                GunFired?.Invoke();
             }
 
         }else {
@@ -54,3 +60,5 @@ public class shoot_gun : MonoBehaviour
 
     }
 }
+
+
