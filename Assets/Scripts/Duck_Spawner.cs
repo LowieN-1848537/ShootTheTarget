@@ -2,19 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class Duck_Spawner : MonoBehaviour
 {
+    
     [SerializeField]
     private GameObject duck;
+    [SerializeField]
+    private TextMeshPro scoretxtfield;
+
+
     private GameObject[] getCount;
     Vector3 position ;
+    private int killCount =0;
+    private bool isKillable;
     // Start is called before the first frame update
     void Start()
     {
         position = new Vector3(3.8f,0.26f,6.947f);
-        
+        scoretxtfield.SetText(killCount.ToString());
         Instantiate(duck, position, new Quaternion(0.0f,0.0f,0.0f,0.0f) );
+        isKillable = true;
     }
 
     // Update is called once per frame
@@ -25,6 +33,12 @@ public class Duck_Spawner : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
         }else if(getCount.Length < 1 && OVRInput.Get(OVRInput.Button.Two)){
                 Instantiate(duck, position, new Quaternion(0.0f,0.0f,0.0f,0.0f) );
+                isKillable = true;
+        }else if (getCount.Length == 0 && isKillable){
+            isKillable =false;
+            //update score here
+            ++killCount;
+            scoretxtfield.SetText(killCount.ToString());
         }
     }
 }
