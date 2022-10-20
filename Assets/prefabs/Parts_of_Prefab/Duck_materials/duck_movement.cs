@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class duck_movement : MonoBehaviour
 {
+    public static event Action ChickenDead;
     [SerializeField]
     public GameObject duck;
     [SerializeField]
@@ -21,8 +23,8 @@ public class duck_movement : MonoBehaviour
         }else if( collision.gameObject.tag == "Bullet"){
         
             Instantiate(m_particles,  m_body.transform.position , m_body.transform.rotation);
-            Object.Destroy(gameObject);
-            
+            UnityEngine.Object.Destroy(gameObject);
+            ChickenDead?.Invoke();
         }
         
 
@@ -44,7 +46,7 @@ public class duck_movement : MonoBehaviour
         m_body.velocity = - transform.right * m_speed;
         if (rotate){
             //int angle = Random.Range(110,250);
-            m_speed = Random.Range(0.5f,2f);
+            m_speed = UnityEngine.Random.Range(0.5f,2f);
             duck.transform.Rotate(0,180,0);
             rotate = false;
             

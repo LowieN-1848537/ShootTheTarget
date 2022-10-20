@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet_script : MonoBehaviour
 {
-
+    [SerializeField]
     float m_speed;
 
     
@@ -28,9 +28,9 @@ public class Bullet_script : MonoBehaviour
 
     void Start()
     {
-        Object.Destroy(gameObject, 5);
+        Object.Destroy(gameObject, 2);
         m_body = GetComponent<Rigidbody>();
-        m_speed = 10f;
+     
     }
 
     // Update is called once per frame
